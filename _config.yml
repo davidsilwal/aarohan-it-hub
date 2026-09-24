@@ -1,0 +1,51 @@
+# Welcome to Aarohan IT Hub!
+# Configuration file for Jekyll
+# For more information, see https://jekyllrb.com/docs/configuration
+
+# Site settings
+title: Aarohan IT Hub
+logo: /assets/images/aarohan-logo.svg
+description: "Aarohan IT Hub - Empowering businesses with innovative technology solutions"
+keyword_exclude: [/node_modules/, /vendor/]
+
+# Social metadata
+social:
+  name: Aarohan IT Hub
+  links:
+    - https://github.com/aarohanithub
+
+# Author
+author:
+  name: Aarohan IT Hub Team
+  url: #
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .git
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# URL settings
+url: "https://aarohanithub.github.io"
+baseurl: "/aarohan-it-hub"
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block_lenient_third_party_processors: false
+
+# Sass
+sass:
+  style: compressed

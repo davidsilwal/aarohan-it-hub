@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="aarohanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#007acc"/>
+      <stop offset="100%" stop-color="#005a9e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="20" fill="none"/>
+  <circle cx="100" cy="100" r="60" fill="url(#aarohanGradient)" opacity="0.9"/>
+  <path d="M100 50 L250 120 L100 110 Z" fill="#fff"/>
+  <path d="M100 150 L250 50 L100 90 Z" fill="#fff"/>
+  <text x="270" y="120" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="url(#aarohanGradient)" text-anchor="middle">Aarohan</text>
+  <text x="270" y="150" font-family="Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">IT Hub</text>
+</svg>
