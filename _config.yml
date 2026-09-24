@@ -49,6 +49,9 @@ exclude:
   - node_modules
   - vendor
   - README.md
+  - package.json
+  - package-lock.json
+  - assets/css/input.css
 
 # Markdown settings
 markdown: kramdown
@@ -56,7 +59,3 @@ kramdown:
   input: GFM
   syntax_highlighter_opts:
     block_lenient_third_party_processors: false
-
-# Sass
-sass:
-  style: compressed

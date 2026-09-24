@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth antialiased">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - Enterprise Software &amp; Cloud Engineering{% endif %}</title>
+  <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Enterprise Software &amp; Cloud Engineering{% endif %}</title>
   
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -28,20 +28,20 @@
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="alternate icon" href="{{ '/assets/images/aarohan-logo.svg' | relative_url }}">
 
-  <!-- Preconnect for fast fonts -->
+  <!-- Plus Jakarta Sans Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
+  <!-- Compiled Tailwind CSS v4 -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body>
+<body class="min-h-screen flex flex-col font-sans bg-white text-slate-900 selection:bg-sky-100 selection:text-sky-900">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   {% include header.html %}
 
-  <main id="main-content" class="site-main">
+  <main id="main-content" class="flex-1 w-full">
     {{ content }}
   </main>
 

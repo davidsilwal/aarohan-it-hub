@@ -2,20 +2,27 @@
 layout: default
 ---
 
-<div class="page-wrapper">
-  <header class="page-hero">
-    <div class="container">
+<div class="w-full">
+  <header class="relative bg-slate-50/80 border-b border-slate-200/80 py-12 sm:py-16 mb-12 overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+    <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       {% if page.badge %}
-        <span class="eyebrow-badge">{{ page.badge }}</span>
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-50 ring-1 ring-sky-200/80 mb-4">
+          {{ page.badge }}
+        </span>
       {% endif %}
-      <h1 class="page-title">{{ page.title }}</h1>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight mb-4">
+        {{ page.title }}
+      </h1>
       {% if page.excerpt %}
-        <p class="page-lead">{{ page.excerpt }}</p>
+        <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed">
+          {{ page.excerpt }}
+        </p>
       {% endif %}
     </div>
   </header>
 
-  <div class="page-content">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-24">
     {{ content }}
   </div>
 </div>

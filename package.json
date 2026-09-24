@@ -1,0 +1,14 @@
+{
+  "name": "aarohan-it-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official production website for Aarohan IT Hub",
+  "scripts": {
+    "build:css": "tailwindcss -i assets/css/input.css -o assets/css/style.css --minify",
+    "watch:css": "tailwindcss -i assets/css/input.css -o assets/css/style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

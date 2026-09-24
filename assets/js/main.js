@@ -1,96 +1,113 @@
 /**
  * Aarohan IT Hub - Main JavaScript
- * Lightweight, accessible, dependency-free vanilla JS
+ * Production-ready, accessible, dependency-free vanilla JS
  */
 
 (function () {
   'use strict';
 
-  // 1. Mobile Menu Toggle
+  // 1. Accessible Mobile Navigation Toggle
   var mobileToggle = document.getElementById('mobile-toggle');
-  var navMenu = document.getElementById('nav-menu');
+  var mobileNav = document.getElementById('mobile-nav');
   var siteHeader = document.getElementById('site-header');
+  var bar1 = document.getElementById('bar-1');
+  var bar2 = document.getElementById('bar-2');
+  var bar3 = document.getElementById('bar-3');
 
-  if (mobileToggle && navMenu) {
+  function setMobileNav(open) {
+    if (!mobileNav || !mobileToggle) return;
+    if (open) {
+      mobileNav.classList.remove('hidden');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      if (bar1 && bar2 && bar3) {
+        bar1.style.transform = 'translateY(4px) rotate(45deg)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'translateY(-4px) rotate(-45deg)';
+      }
+    } else {
+      mobileNav.classList.add('hidden');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      if (bar1 && bar2 && bar3) {
+        bar1.style.transform = 'none';
+        bar2.style.opacity = '1';
+        bar3.style.transform = 'none';
+      }
+    }
+  }
+
+  if (mobileToggle && mobileNav) {
     mobileToggle.addEventListener('click', function (e) {
       e.stopPropagation();
-      var isOpen = navMenu.classList.toggle('is-open');
-      mobileToggle.classList.toggle('is-open', isOpen);
-      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      var isCurrentlyHidden = mobileNav.classList.contains('hidden');
+      setMobileNav(isCurrentlyHidden);
     });
 
-    // Close mobile menu on Escape key
+    // Close on Escape key
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
-        navMenu.classList.remove('is-open');
-        mobileToggle.classList.remove('is-open');
-        mobileToggle.setAttribute('aria-expanded', 'false');
+      if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
+        setMobileNav(false);
         mobileToggle.focus();
       }
     });
 
-    // Close mobile menu on click outside
+    // Close on click outside
     document.addEventListener('click', function (e) {
-      if (navMenu.classList.contains('is-open')) {
+      if (!mobileNav.classList.contains('hidden')) {
         if (!siteHeader.contains(e.target)) {
-          navMenu.classList.remove('is-open');
-          mobileToggle.classList.remove('is-open');
-          mobileToggle.setAttribute('aria-expanded', 'false');
+          setMobileNav(false);
         }
       }
     });
 
-    // Close mobile menu when clicking any nav link
-    var navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(function (link) {
+    // Close when any link inside mobile menu is clicked
+    var mobileLinks = mobileNav.querySelectorAll('a');
+    mobileLinks.forEach(function (link) {
       link.addEventListener('click', function () {
-        if (navMenu.classList.contains('is-open')) {
-          navMenu.classList.remove('is-open');
-          mobileToggle.classList.remove('is-open');
-          mobileToggle.setAttribute('aria-expanded', 'false');
-        }
+        setMobileNav(false);
       });
     });
   }
 
-  // 2. Header shadow on scroll
+  // 2. Sticky Header Elevation on Scroll
   function updateHeaderScroll() {
     if (!siteHeader) return;
-    if (window.scrollY > 20) {
-      siteHeader.classList.add('is-scrolled');
+    if (window.scrollY > 15) {
+      siteHeader.classList.add('shadow-xs', 'bg-white/95');
+      siteHeader.classList.remove('bg-white/85');
     } else {
-      siteHeader.classList.remove('is-scrolled');
+      siteHeader.classList.remove('shadow-xs', 'bg-white/95');
+      siteHeader.classList.add('bg-white/85');
     }
   }
 
   window.addEventListener('scroll', updateHeaderScroll, { passive: true });
   updateHeaderScroll();
 
-  // 3. Copy Email to Clipboard
+  // 3. Interactive Copy-to-Clipboard for Email
   var copyButtons = document.querySelectorAll('.copy-email-btn');
   copyButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var email = this.getAttribute('data-email');
       if (!email) return;
 
-      var textSpan = this.querySelector('.btn-text') || this;
-      var originalText = textSpan.textContent;
+      var textSpan = this.querySelector('.btn-text');
+      var originalText = textSpan ? textSpan.textContent : 'Copy';
 
-      function onCopySuccess() {
-        textSpan.textContent = 'Copied to Clipboard!';
-        btn.classList.add('btn-copied');
+      function onSuccess() {
+        if (textSpan) textSpan.textContent = 'Copied!';
+        btn.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-300');
         setTimeout(function () {
-          textSpan.textContent = originalText;
-          btn.classList.remove('btn-copied');
+          if (textSpan) textSpan.textContent = originalText;
+          btn.classList.remove('bg-emerald-50', 'text-emerald-700', 'border-emerald-300');
         }, 2200);
       }
 
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(email).then(onCopySuccess).catch(function () {
-          fallbackCopyText(email, onCopySuccess);
+        navigator.clipboard.writeText(email).then(onSuccess).catch(function () {
+          fallbackCopyText(email, onSuccess);
         });
       } else {
-        fallbackCopyText(email, onCopySuccess);
+        fallbackCopyText(email, onSuccess);
       }
     });
   });

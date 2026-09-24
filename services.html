@@ -6,251 +6,254 @@ permalink: /services/
 excerpt: "Full-cycle software engineering, cloud infrastructure, and technical consulting built around reliability, performance, and simplicity."
 ---
 
-<div class="container services-page-container">
-  <div class="services-stack-list">
+<!-- Services Stack -->
+<div class="space-y-8">
 
-    <!-- Service 1: Custom Software & Web -->
-    <section class="service-detail-card" id="web-dev">
-      <div class="service-detail-header">
-        <div class="service-detail-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-        </div>
-        <div class="service-detail-title-group">
-          <span class="service-category">Core Engineering</span>
-          <h2>Custom Software &amp; Web Applications</h2>
-        </div>
+  <!-- Service 1: Custom Web & Software -->
+  <section class="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-2xs scroll-mt-24" id="web-dev">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
       </div>
-      <p class="service-summary">
-        We build robust, scalable web applications, enterprise portals, and SaaS platforms engineered for high throughput, maintainability, and clean user experience. Every application is built with modern, typed technologies and strict code standards.
-      </p>
-      <div class="service-breakdown-grid">
-        <div class="breakdown-col">
-          <h4>Deliverables &amp; Solutions</h4>
-          <ul class="clean-bullet-list">
-            <li>Enterprise web applications &amp; client portals</li>
-            <li>RESTful, GraphQL, and event-driven API backends</li>
-            <li>Single-page (SPA) &amp; Server-Side Rendered (SSR) web systems</li>
-            <li>Relational &amp; non-relational database architecture</li>
-            <li>Third-party platform, payment gateway &amp; ERP integrations</li>
-          </ul>
-        </div>
-        <div class="breakdown-col">
-          <h4>Technologies</h4>
-          <div class="tech-pills">
-            <span class="tech-pill">TypeScript</span>
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">Next.js</span>
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">Python</span>
-            <span class="tech-pill">PostgreSQL</span>
-            <span class="tech-pill">Redis</span>
-          </div>
-        </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Core Engineering</span>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-950">Custom Software &amp; Web Applications</h2>
       </div>
-    </section>
-
-    <!-- Service 2: Cloud & DevOps -->
-    <section class="service-detail-card" id="cloud">
-      <div class="service-detail-header">
-        <div class="service-detail-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-        </div>
-        <div class="service-detail-title-group">
-          <span class="service-category">Infrastructure</span>
-          <h2>Cloud Architecture, DevOps &amp; SRE</h2>
-        </div>
-      </div>
-      <p class="service-summary">
-        We architect resilient cloud environments on AWS and Google Cloud that ensure 99.9% uptime, zero-downtime rolling deployments, and significant cost savings over unoptimized infrastructure.
-      </p>
-      <div class="service-breakdown-grid">
-        <div class="breakdown-col">
-          <h4>Deliverables &amp; Solutions</h4>
-          <ul class="clean-bullet-list">
-            <li>Cloud migrations with zero downtime and automated failover</li>
-            <li>Infrastructure as Code (IaC) using Terraform &amp; CloudFormation</li>
-            <li>Containerization with Docker &amp; Kubernetes cluster orchestration</li>
-            <li>Automated CI/CD pipelines (GitHub Actions, GitLab CI)</li>
-            <li>Observability, centralized logging, and real-time alerting</li>
-          </ul>
-        </div>
-        <div class="breakdown-col">
-          <h4>Technologies</h4>
-          <div class="tech-pills">
-            <span class="tech-pill">AWS</span>
-            <span class="tech-pill">Google Cloud</span>
-            <span class="tech-pill">Docker</span>
-            <span class="tech-pill">Kubernetes</span>
-            <span class="tech-pill">Terraform</span>
-            <span class="tech-pill">GitHub Actions</span>
-            <span class="tech-pill">Prometheus</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service 3: IT Consulting -->
-    <section class="service-detail-card" id="consulting">
-      <div class="service-detail-header">
-        <div class="service-detail-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-        </div>
-        <div class="service-detail-title-group">
-          <span class="service-category">Advisory</span>
-          <h2>Strategic IT Systems Consulting</h2>
-        </div>
-      </div>
-      <p class="service-summary">
-        Cut through technology hype and build what truly drives business value. We guide executives and engineering teams through complex architectural decisions, vendor evaluations, and technical modernization.
-      </p>
-      <div class="service-breakdown-grid">
-        <div class="breakdown-col">
-          <h4>Deliverables &amp; Solutions</h4>
-          <ul class="clean-bullet-list">
-            <li>Comprehensive system architecture audits &amp; code reviews</li>
-            <li>Monolith-to-microservices migration roadmaps</li>
-            <li>Cloud hosting cost reduction &amp; resource rightsizing</li>
-            <li>Technology stack selection and vetting</li>
-            <li>Technical documentation and developer onboarding blueprints</li>
-          </ul>
-        </div>
-        <div class="breakdown-col">
-          <h4>Key Focus Areas</h4>
-          <div class="tech-pills">
-            <span class="tech-pill">System Audits</span>
-            <span class="tech-pill">Cost Optimization</span>
-            <span class="tech-pill">Scalability Planning</span>
-            <span class="tech-pill">Architecture Design</span>
-            <span class="tech-pill">Due Diligence</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service 4: Cybersecurity -->
-    <section class="service-detail-card" id="security">
-      <div class="service-detail-header">
-        <div class="service-detail-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-        </div>
-        <div class="service-detail-title-group">
-          <span class="service-category">Security</span>
-          <h2>Cybersecurity &amp; Infrastructure Hardening</h2>
-        </div>
-      </div>
-      <p class="service-summary">
-        Security isn't a feature; it's a foundational discipline. We evaluate your network, application layer, and cloud posture to eliminate vulnerabilities and ensure complete regulatory and business continuity compliance.
-      </p>
-      <div class="service-breakdown-grid">
-        <div class="breakdown-col">
-          <h4>Deliverables &amp; Solutions</h4>
-          <ul class="clean-bullet-list">
-            <li>Application security audits &amp; dependency vulnerability scans</li>
-            <li>Identity and Access Management (IAM) policy enforcement</li>
-            <li>SSL/TLS, encryption-at-rest, and encryption-in-transit setup</li>
-            <li>Automated database backups &amp; disaster recovery testing</li>
-            <li>Security awareness and operational hygiene guidelines</li>
-          </ul>
-        </div>
-        <div class="breakdown-col">
-          <h4>Security Practices</h4>
-          <div class="tech-pills">
-            <span class="tech-pill">OWASP Top 10</span>
-            <span class="tech-pill">Zero-Trust</span>
-            <span class="tech-pill">Role-Based Access</span>
-            <span class="tech-pill">Data Encryption</span>
-            <span class="tech-pill">Automated Backups</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service 5: Mobile & APIs -->
-    <section class="service-detail-card" id="mobile">
-      <div class="service-detail-header">
-        <div class="service-detail-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-        </div>
-        <div class="service-detail-title-group">
-          <span class="service-category">Multi-Platform</span>
-          <h2>Mobile Applications &amp; API Integration</h2>
-        </div>
-      </div>
-      <p class="service-summary">
-        Cross-platform mobile applications engineered to deliver native performance with unified codebases, seamless offline functionality, and resilient synchronization with your backend APIs.
-      </p>
-      <div class="service-breakdown-grid">
-        <div class="breakdown-col">
-          <h4>Deliverables &amp; Solutions</h4>
-          <ul class="clean-bullet-list">
-            <li>Cross-platform iOS and Android mobile applications</li>
-            <li>Offline-first data sync &amp; local caching</li>
-            <li>Push notifications, deep-linking, and analytics</li>
-            <li>App Store &amp; Google Play Store release management</li>
-            <li>Unified backend API layers for web &amp; mobile clients</li>
-          </ul>
-        </div>
-        <div class="breakdown-col">
-          <h4>Technologies</h4>
-          <div class="tech-pills">
-            <span class="tech-pill">React Native</span>
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">TypeScript</span>
-            <span class="tech-pill">GraphQL</span>
-            <span class="tech-pill">Firebase</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Delivery Methodology -->
-  <section class="delivery-process-section">
-    <div class="section-header">
-      <span class="eyebrow-badge">Methodology</span>
-      <h2 class="section-title">How We Deliver Work</h2>
-      <p class="section-lead">A disciplined, transparent delivery framework focused on rapid milestones and zero ambiguity.</p>
     </div>
-
-    <div class="process-steps-grid">
-      <div class="process-card">
-        <span class="step-num">01</span>
-        <h3>Discovery &amp; Scoping</h3>
-        <p>We analyze functional specifications, existing architectures, and core requirements to produce a clear roadmap and fixed deliverables.</p>
+    <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+      We build robust, scalable web applications, enterprise portals, and SaaS platforms engineered for high throughput, maintainability, and clean user experience. Every application is built with modern, typed technologies and strict code standards.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Deliverables &amp; Solutions</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Enterprise web applications &amp; client portals</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>RESTful, GraphQL, and event-driven API backends</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Single-page (SPA) &amp; Server-Side Rendered (SSR) web systems</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Relational &amp; non-relational database architecture</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Third-party platform, payment gateway &amp; ERP integrations</li>
+        </ul>
       </div>
-
-      <div class="process-card">
-        <span class="step-num">02</span>
-        <h3>Architecture Blueprint</h3>
-        <p>We define database schemas, API contracts, security models, and cloud infrastructure before writing a single line of application code.</p>
-      </div>
-
-      <div class="process-card">
-        <span class="step-num">03</span>
-        <h3>Iterative Sprints</h3>
-        <p>Bi-weekly releases with accessible staging environments, clean pull requests, and automated test runs so you track real progress.</p>
-      </div>
-
-      <div class="process-card">
-        <span class="step-num">04</span>
-        <h3>Production &amp; SLA</h3>
-        <p>Automated deployment, configuration handover, comprehensive documentation, and ongoing monitoring for total peace of mind.</p>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Core Stack</h4>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">TypeScript</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">React</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Next.js</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Node.js</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Python</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">PostgreSQL</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Redis</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <div class="page-bottom-cta">
-    <div class="cta-inner">
-      <div>
-        <h3>Have a technical project to discuss?</h3>
-        <p>Reach out directly to review requirements, feasibility, or obtain an engineering proposal.</p>
+  <!-- Service 2: Cloud & DevOps -->
+  <section class="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-2xs scroll-mt-24" id="cloud">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
       </div>
       <div>
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Schedule Consultation</a>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Infrastructure</span>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-950">Cloud Architecture, DevOps &amp; SRE</h2>
       </div>
     </div>
+    <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+      We architect resilient cloud environments on AWS and Google Cloud that ensure 99.9% uptime, zero-downtime rolling deployments, and significant cost savings over unoptimized infrastructure.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Deliverables &amp; Solutions</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Cloud migrations with zero downtime and automated failover</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Infrastructure as Code (IaC) using Terraform &amp; CloudFormation</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Containerization with Docker &amp; Kubernetes cluster orchestration</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Automated CI/CD pipelines (GitHub Actions, GitLab CI)</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Observability, centralized logging, and real-time alerting</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Core Stack</h4>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">AWS</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Google Cloud</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Docker</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Kubernetes</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Terraform</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">GitHub Actions</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Prometheus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 3: IT Consulting -->
+  <section class="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-2xs scroll-mt-24" id="consulting">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+      </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Advisory</span>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-950">Strategic IT Systems Consulting</h2>
+      </div>
+    </div>
+    <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+      Cut through technology hype and build what truly drives business value. We guide executives and engineering teams through complex architectural decisions, vendor evaluations, and technical modernization.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Deliverables &amp; Solutions</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Comprehensive system architecture audits &amp; code reviews</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Monolith-to-microservices migration roadmaps</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Cloud hosting cost reduction &amp; resource rightsizing</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Technology stack selection and vetting</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Technical documentation and developer onboarding blueprints</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Focus Areas</h4>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">System Audits</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">Cost Optimization</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">Scalability Roadmaps</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">Due Diligence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 4: Cybersecurity -->
+  <section class="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-2xs scroll-mt-24" id="security">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+      </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Security</span>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-950">Cybersecurity &amp; Systems Auditing</h2>
+      </div>
+    </div>
+    <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+      Security isn't an afterthought; it's a foundational discipline. We evaluate your network, application layer, and cloud posture to eliminate vulnerabilities and ensure complete regulatory and business continuity compliance.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Deliverables &amp; Solutions</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Application security audits &amp; dependency vulnerability scans</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Identity and Access Management (IAM) policy enforcement</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>SSL/TLS, encryption-at-rest, and encryption-in-transit setup</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Automated database backups &amp; disaster recovery testing</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Standards &amp; Practices</h4>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">OWASP Top 10</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">Zero-Trust</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">Role-Based Access (RBAC)</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200">Data Encryption</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 5: Mobile & APIs -->
+  <section class="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-2xs scroll-mt-24" id="mobile">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+      </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Multi-Platform</span>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-950">Mobile Applications &amp; API Integration</h2>
+      </div>
+    </div>
+    <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+      Cross-platform mobile applications engineered to deliver native performance with unified codebases, seamless offline functionality, and resilient synchronization with your backend APIs.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Deliverables &amp; Solutions</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Cross-platform iOS and Android mobile applications</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Offline-first data sync &amp; local SQLite/caching</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Push notifications, deep-linking, and analytics</li>
+          <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-600 mt-2 shrink-0"></span>Unified backend API layers for web &amp; mobile clients</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Core Stack</h4>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">React Native</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Flutter</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">TypeScript</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">GraphQL</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium text-slate-700 bg-slate-100 border border-slate-200">Firebase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Delivery Process Section -->
+<section class="mt-20 pt-16 border-t border-slate-200">
+  <div class="max-w-2xl mx-auto text-center mb-12">
+    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-50 ring-1 ring-sky-200/80 mb-3">
+      Methodology
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950 mb-3">
+      How We Deliver Engineering Projects
+    </h2>
+    <p class="text-sm sm:text-base text-slate-600">
+      A disciplined, transparent delivery framework focused on rapid milestones and zero ambiguity.
+    </p>
   </div>
 
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs">
+      <span class="text-xs font-bold font-mono text-sky-600 mb-2 block">STEP 01</span>
+      <h3 class="text-base font-bold text-slate-950 mb-2">Discovery &amp; Scoping</h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        We analyze functional specifications, existing architectures, and core requirements to produce a clear roadmap and fixed deliverables.
+      </p>
+    </div>
+    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs">
+      <span class="text-xs font-bold font-mono text-sky-600 mb-2 block">STEP 02</span>
+      <h3 class="text-base font-bold text-slate-950 mb-2">Architecture Blueprint</h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        We define database schemas, API contracts, security models, and cloud infrastructure before writing a single line of application code.
+      </p>
+    </div>
+    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs">
+      <span class="text-xs font-bold font-mono text-sky-600 mb-2 block">STEP 03</span>
+      <h3 class="text-base font-bold text-slate-950 mb-2">Iterative Sprints</h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        Bi-weekly releases with accessible staging environments, clean pull requests, and automated test runs so you track real progress.
+      </p>
+    </div>
+    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs">
+      <span class="text-xs font-bold font-mono text-sky-600 mb-2 block">STEP 04</span>
+      <h3 class="text-base font-bold text-slate-950 mb-2">Production &amp; SLA</h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        Automated deployment, configuration handover, comprehensive documentation, and ongoing monitoring for total peace of mind.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA Card -->
+<div class="mt-20 p-8 sm:p-10 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-6">
+  <div>
+    <h3 class="text-xl font-bold tracking-tight text-slate-950 mb-1">Have a technical requirement to discuss?</h3>
+    <p class="text-sm text-slate-600">Reach out directly to review feasibility, timelines, or obtain an engineering proposal.</p>
+  </div>
+  <a href="{{ '/contact/' | relative_url }}" class="shrink-0 inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-xl shadow-xs transition-all">
+    Schedule Technical Consultation
+  </a>
 </div>

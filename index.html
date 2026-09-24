@@ -1,224 +1,304 @@
 ---
 layout: default
 title: "Home"
-excerpt: "Aarohan IT Hub is a technology and cloud engineering firm in Kathmandu, Nepal. We craft scalable web platforms, cloud architecture, and modern digital systems."
+excerpt: "Aarohan IT Hub is an engineering and cloud infrastructure studio in Kathmandu, Nepal. We craft scalable web platforms, cloud architecture, and modern digital systems."
 ---
 
 <!-- Hero Section -->
-<section class="hero-section">
-  <div class="container hero-container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span>Software Engineering &amp; Cloud Studio &middot; Kathmandu, Nepal</span>
+<section class="relative overflow-hidden pt-16 pb-20 md:pt-28 md:pb-28 border-b border-slate-200/70 bg-radial-[at_50%_0%] from-sky-500/6 via-transparent to-transparent">
+  <div class="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
+
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+    
+    <!-- Status Badge -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 bg-white border border-slate-200/90 shadow-2xs mb-8 hover:border-slate-300 transition-colors">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span>Software Engineering &amp; Cloud Studio &middot; Kathmandu, Nepal</span>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.15rem] font-extrabold tracking-tight text-slate-950 max-w-4xl mx-auto leading-[1.12] mb-6">
+      We engineer <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-700">high-performance software</span>, cloud architecture, and digital systems.
+    </h1>
+
+    <!-- Subtitle / Value Proposition -->
+    <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10">
+      Aarohan IT Hub partners with forward-thinking enterprises and growing companies to architect, build, and scale resilient technology solutions with zero bloat.
+    </p>
+
+    <!-- Hero Actions -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-14">
+      <a href="{{ '/services/' | relative_url }}" class="w-full sm:w-auto px-6 py-3 text-base font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-xl shadow-xs hover:shadow-md hover:shadow-sky-600/20 transition-all flex items-center justify-center gap-2">
+        <span>Explore Capabilities</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </a>
+      <a href="{{ '/projects/' | relative_url }}" class="w-full sm:w-auto px-6 py-3 text-base font-semibold text-slate-700 hover:text-slate-950 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl shadow-2xs hover:border-slate-300 transition-all flex items-center justify-center gap-2">
+        <span>View Case Studies</span>
+      </a>
+    </div>
+
+    <!-- Trust Row -->
+    <div class="pt-8 border-t border-slate-200/70 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm font-medium text-slate-500">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Production-Grade Architecture</span>
       </div>
-      <h1 class="hero-headline">
-        We engineer high-performance software, cloud systems, and modern digital products.
-      </h1>
-      <p class="hero-lead">
-        Aarohan IT Hub partners with forward-thinking enterprises and growing companies to architect, build, and scale resilient technology solutions with zero bloat.
-      </p>
-      <div class="hero-actions">
-        <a href="{{ '/services/' | relative_url }}" class="btn btn-primary">Our Capabilities</a>
-        <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">View Case Studies</a>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Cloud &amp; DevOps Native</span>
       </div>
-      <div class="hero-trust-row">
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>Production-Grade Architecture</span>
-        </div>
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>Cloud &amp; DevOps Native</span>
-        </div>
-        <div class="trust-item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>Direct Technical Collaboration</span>
-        </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Direct Senior Collaboration</span>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- Metrics & Impact Bar -->
-<section class="metrics-bar">
-  <div class="container">
-    <div class="metrics-grid">
-      <div class="metric-item">
-        <div class="metric-number">50+</div>
-        <div class="metric-label">Projects Delivered</div>
+<section class="py-10 bg-slate-50/70 border-b border-slate-200/70">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200/80">
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-1">50+</div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Projects Delivered</div>
       </div>
-      <div class="metric-item">
-        <div class="metric-number">99.9%</div>
-        <div class="metric-label">Target Cloud Uptime</div>
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-1">99.9%</div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Target Cloud Uptime</div>
       </div>
-      <div class="metric-item">
-        <div class="metric-number">4+</div>
-        <div class="metric-label">Years of Engineering</div>
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-1">4+ Years</div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Engineering Track Record</div>
       </div>
-      <div class="metric-item">
-        <div class="metric-number">&lt; 24h</div>
-        <div class="metric-label">Direct Response SLA</div>
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-1">&lt; 24h</div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Response SLA</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Core Capabilities Preview -->
-<section class="section capabilities-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow-badge">Capabilities</span>
-      <h2 class="section-title">End-to-End Technology Solutions</h2>
-      <p class="section-lead">Disciplined engineering practices designed to solve core technical and operational challenges.</p>
+<!-- Core Capabilities Section -->
+<section class="py-20 lg:py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="max-w-2xl mx-auto text-center mb-16">
+      <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-50 ring-1 ring-sky-200/80 mb-3">
+        Capabilities
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-4">
+        End-to-End Technology Solutions
+      </h2>
+      <p class="text-base sm:text-lg text-slate-600">
+        Disciplined engineering practices designed to solve core technical and operational challenges.
+      </p>
     </div>
 
-    <div class="capabilities-grid">
-      <div class="capability-card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      
+      <!-- Card 1 -->
+      <div class="group relative p-8 rounded-2xl bg-white border border-slate-200/90 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-500/5 hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
         </div>
-        <h3>Custom Software &amp; Web Platforms</h3>
-        <p>Full-stack web applications, customer portals, and internal tooling engineered with modern, typed frameworks for speed and reliability.</p>
-        <ul class="capability-checklist">
-          <li>Enterprise Web Applications</li>
-          <li>API Architecture &amp; Integrations</li>
-          <li>Database Modeling &amp; Optimization</li>
+        <h3 class="text-xl font-bold tracking-tight text-slate-950 mb-2">Custom Software &amp; Web Platforms</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Full-stack web applications, customer portals, and internal tooling engineered with modern, typed frameworks for speed, resilience, and maintainability.
+        </p>
+        <ul class="space-y-2 text-xs font-medium text-slate-600 pt-4 border-t border-slate-100">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Enterprise Web Applications</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>API Architecture &amp; Integrations</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Database Modeling &amp; Optimization</li>
         </ul>
       </div>
 
-      <div class="capability-card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+      <!-- Card 2 -->
+      <div class="group relative p-8 rounded-2xl bg-white border border-slate-200/90 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-500/5 hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
         </div>
-        <h3>Cloud Architecture &amp; DevOps</h3>
-        <p>Scalable cloud infrastructure on AWS and Google Cloud with automated CI/CD pipelines, container orchestration, and zero-downtime releases.</p>
-        <ul class="capability-checklist">
-          <li>Cloud Migration &amp; Cost Control</li>
-          <li>Docker &amp; Kubernetes Environments</li>
-          <li>Automated Testing &amp; Deployments</li>
+        <h3 class="text-xl font-bold tracking-tight text-slate-950 mb-2">Cloud Architecture &amp; DevOps</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Scalable cloud infrastructure on AWS and Google Cloud with automated CI/CD pipelines, container orchestration, and zero-downtime releases.
+        </p>
+        <ul class="space-y-2 text-xs font-medium text-slate-600 pt-4 border-t border-slate-100">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Cloud Migration &amp; Cost Control</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Docker &amp; Kubernetes Environments</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Automated Testing &amp; Deployments</li>
         </ul>
       </div>
 
-      <div class="capability-card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+      <!-- Card 3 -->
+      <div class="group relative p-8 rounded-2xl bg-white border border-slate-200/90 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-500/5 hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
         </div>
-        <h3>Strategic IT Systems Consulting</h3>
-        <p>Pragmatic technology advisory to align system architecture with business strategy, modernize legacy software, and optimize technical debt.</p>
-        <ul class="capability-checklist">
-          <li>System Architecture Roadmaps</li>
-          <li>Legacy Modernization Plans</li>
-          <li>Performance &amp; Scale Audits</li>
+        <h3 class="text-xl font-bold tracking-tight text-slate-950 mb-2">Strategic IT Systems Consulting</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Pragmatic technology advisory to align system architecture with business strategy, modernize legacy software, and optimize technical debt.
+        </p>
+        <ul class="space-y-2 text-xs font-medium text-slate-600 pt-4 border-t border-slate-100">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>System Architecture Roadmaps</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Legacy Modernization Plans</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Performance &amp; Scale Audits</li>
         </ul>
       </div>
 
-      <div class="capability-card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <!-- Card 4 -->
+      <div class="group relative p-8 rounded-2xl bg-white border border-slate-200/90 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-500/5 hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
         </div>
-        <h3>Cybersecurity &amp; Systems Auditing</h3>
-        <p>Proactive security assessments, identity management, vulnerability scanning, and hardening to safeguard your critical data and assets.</p>
-        <ul class="capability-checklist">
-          <li>Vulnerability &amp; Code Scanning</li>
-          <li>Access Control &amp; IAM Policies</li>
-          <li>Disaster Recovery &amp; Failover</li>
+        <h3 class="text-xl font-bold tracking-tight text-slate-950 mb-2">Cybersecurity &amp; Systems Auditing</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Proactive security assessments, identity management, vulnerability scanning, and hardening to safeguard your critical data and assets.
+        </p>
+        <ul class="space-y-2 text-xs font-medium text-slate-600 pt-4 border-t border-slate-100">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Vulnerability &amp; Code Scanning</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Access Control &amp; IAM Policies</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>Disaster Recovery &amp; Failover</li>
         </ul>
       </div>
+
     </div>
 
-    <div class="section-footer-link">
-      <a href="{{ '/services/' | relative_url }}" class="inline-arrow-link">
-        Explore full service breakdown and specifications
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    <div class="mt-12 text-center">
+      <a href="{{ '/services/' | relative_url }}" class="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 hover:text-sky-700 group">
+        <span>Explore full service specifications &amp; technical deliverables</span>
+        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
       </a>
     </div>
+
   </div>
 </section>
 
-<!-- Featured Projects Preview -->
-<section class="section section-surface featured-projects-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow-badge">Portfolio</span>
-      <h2 class="section-title">Selected Case Studies</h2>
-      <p class="section-lead">A snapshot of mission-critical systems and software delivered for our partners.</p>
+<!-- Featured Projects Section -->
+<section class="py-20 lg:py-24 bg-slate-50/70 border-y border-slate-200/70">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="max-w-2xl mx-auto text-center mb-16">
+      <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-50 ring-1 ring-sky-200/80 mb-3">
+        Portfolio
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-4">
+        Selected Case Studies
+      </h2>
+      <p class="text-base sm:text-lg text-slate-600">
+        A snapshot of mission-critical systems and software delivered for our partners.
+      </p>
     </div>
 
-    <div class="projects-grid">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {% for project in site.projects limit:3 %}
-      <div class="project-summary-card">
-        <div class="project-card-header">
-          <span class="project-domain-tag">{{ project.meta.domain | default: "Enterprise Solution" }}</span>
-          <span class="project-year">{{ project.meta.date | default: "2024" }}</span>
+      <div class="flex flex-col p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-between gap-2 mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-700">{{ project.meta.domain | default: "Enterprise Solution" }}</span>
+          <span class="text-xs font-mono text-slate-400">{{ project.meta.date | default: "2024" }}</span>
         </div>
-        <h3 class="project-card-title">
-          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        <h3 class="text-lg font-bold tracking-tight text-slate-950 mb-2">
+          <a href="{{ project.url | relative_url }}" class="hover:text-sky-600 transition-colors">{{ project.title }}</a>
         </h3>
-        <p class="project-card-desc">{{ project.description | default: project.content | strip_html | truncate: 140 }}</p>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5 grow">
+          {{ project.description | default: project.content | strip_html | truncate: 140 }}
+        </p>
         {% if project.meta.technologies %}
-          <div class="project-card-tech">
+          <div class="flex flex-wrap gap-1 mb-5">
             {% assign tags = project.meta.technologies | split: ", " %}
             {% for t in tags limit:4 %}
-              <span class="tech-pill">{{ t }}</span>
+              <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium text-slate-600 bg-slate-100 border border-slate-200">{{ t }}</span>
             {% endfor %}
           </div>
         {% endif %}
-        <div class="project-card-footer">
-          <a href="{{ project.url | relative_url }}" class="card-link">Read Case Study &rarr;</a>
+        <div class="pt-4 border-t border-slate-100">
+          <a href="{{ project.url | relative_url }}" class="inline-flex items-center gap-1 text-xs font-semibold text-sky-600 hover:text-sky-700 group">
+            <span>Read Case Study</span>
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+          </a>
         </div>
       </div>
       {% endfor %}
     </div>
 
-    <div class="section-footer-link">
-      <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">View All Projects</a>
+    <div class="mt-12 text-center">
+      <a href="{{ '/projects/' | relative_url }}" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-slate-700 hover:text-slate-950 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl shadow-2xs hover:border-slate-300 transition-all">
+        View All Projects &amp; Architectures
+      </a>
     </div>
+
   </div>
 </section>
 
 <!-- Engineering Principles ("Less is More") -->
-<section class="section principles-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow-badge">Our Philosophy</span>
-      <h2 class="section-title">Why Engineering Teams Choose Aarohan</h2>
-      <p class="section-lead">We believe simplicity, architectural clarity, and direct communication create the best software.</p>
+<section class="py-20 lg:py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="max-w-2xl mx-auto text-center mb-16">
+      <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-50 ring-1 ring-sky-200/80 mb-3">
+        Our Philosophy
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 mb-4">
+        Why Engineering Teams Choose Aarohan
+      </h2>
+      <p class="text-base sm:text-lg text-slate-600">
+        We believe simplicity, architectural clarity, and direct communication create the best software.
+      </p>
     </div>
 
-    <div class="principles-grid">
-      <div class="principle-card">
-        <div class="principle-num">01</div>
-        <h3>Minimalism &amp; Performance</h3>
-        <p>We eliminate unnecessary dependencies and bloated frameworks. Clean architecture results in faster load times, lower hosting costs, and effortless maintenance.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+        <span class="block text-sm font-bold font-mono text-sky-600 mb-3">01</span>
+        <h3 class="text-lg font-bold tracking-tight text-slate-950 mb-2">Minimalism &amp; Performance</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          We eliminate unnecessary dependencies and bloated frameworks. Clean architecture results in faster load times, lower hosting costs, and effortless maintenance.
+        </p>
       </div>
 
-      <div class="principle-card">
-        <div class="principle-num">02</div>
-        <h3>Production-Ready from Day One</h3>
-        <p>Security policies, automated tests, environment configs, and CI/CD pipelines are built directly into our baseline. We never treat infrastructure as an afterthought.</p>
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+        <span class="block text-sm font-bold font-mono text-sky-600 mb-3">02</span>
+        <h3 class="text-lg font-bold tracking-tight text-slate-950 mb-2">Production-Ready by Default</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Security policies, automated tests, environment configs, and CI/CD pipelines are built directly into our baseline. We never treat infrastructure as an afterthought.
+        </p>
       </div>
 
-      <div class="principle-card">
-        <div class="principle-num">03</div>
-        <h3>Direct Senior Collaboration</h3>
-        <p>You speak directly with the engineers building your systems. No middlemen, no jargon, and complete transparency on timelines, budgets, and code ownership.</p>
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+        <span class="block text-sm font-bold font-mono text-sky-600 mb-3">03</span>
+        <h3 class="text-lg font-bold tracking-tight text-slate-950 mb-2">Direct Senior Collaboration</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          You speak directly with the engineers building your systems. No middlemen, no jargon, and complete transparency on timelines, budgets, and code ownership.
+        </p>
       </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- Minimalist Direct CTA Banner -->
-<section class="cta-banner-section">
-  <div class="container">
-    <div class="cta-banner">
-      <div class="cta-text">
-        <span class="eyebrow-badge eyebrow-white">Get in Touch</span>
-        <h2>Have a project or technical challenge in mind?</h2>
-        <p>Reach out directly for an engineering assessment, architectural consultation, or project scope estimation.</p>
+<!-- Direct CTA Banner -->
+<section class="pb-20 lg:pb-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl bg-slate-950 text-white p-8 sm:p-12 lg:p-16 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="max-w-xl">
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 bg-white/10 ring-1 ring-white/20 mb-4">
+          Get In Touch
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3 text-white">
+          Have a project or technical challenge in mind?
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+          Reach out directly for an engineering assessment, architectural consultation, or project scope estimation.
+        </p>
       </div>
-      <div class="cta-action">
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-cta">Contact Our Engineers</a>
+      <div class="shrink-0 w-full sm:w-auto">
+        <a href="{{ '/contact/' | relative_url }}" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-xl shadow-sm transition-all">
+          Contact Our Engineers
+        </a>
       </div>
     </div>
   </div>
