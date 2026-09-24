@@ -1,12 +1,8 @@
-# GitHub Actions workflow for deploying Jekyll site to GitHub Pages
-# This workflow builds the site and deploys it automatically on every push to main
-
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main, master ]
-  # Allows you to run the workflow manually
   workflow_dispatch:
 
 permissions:
@@ -14,27 +10,18 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  # We need the test jobs to request 'environments'
-  # that should be deployed
-  environment:
-    url: ${{ steps.deployment.outputs.page_url }}
-
 jobs:
-  # Job to build the Jekyll site
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Initialize the theme gems
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
 
-      # Build the static site
       - name: Build Jekyll site
         run: bundle exec jekyll build
         env:
@@ -47,20 +34,14 @@ jobs:
         with:
           path: _site/
 
-  # Job to deploy to GitHub Pages
   deploy:
     needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    # Deploy on push to main branch or on workflow_dispatch
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch'
+    environment: github-pages
     permissions:
       contents: read
       pages: write
       id-token: write
-    environment: github-pages
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
