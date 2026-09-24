@@ -1,159 +1,86 @@
-# Aarohan IT Hub Website
+# Aarohan IT Hub
 
-A professional Jekyll website for **Aarohan IT Hub** - a technology company based in Kathmandu, Nepal, dedicated to delivering exceptional IT services to businesses of all sizes.
+Official production website for **Aarohan IT Hub** — an engineering and cloud infrastructure studio based in Kathmandu, Nepal.
 
-## Overview
+Designed with an ultra-clean, minimalist tech aesthetic ("less is more"), optimized for speed, clarity, accessibility, and zero-maintenance static deployment.
 
-This website provides a comprehensive showcase of our services, projects, and company information, designed to attract and engage potential clients.
+## Production URL
 
-## Features
+- **Custom Domain:** [https://aarohanithub.com.np](https://aarohanithub.com.np)
 
-- **Responsive Design** - Works flawlessly on all devices (desktop, tablet, mobile)
-- **Modern UI** - Clean, professional design with a blue tech color scheme
-- **Service Showcase** - Detailed presentation of our technology services
-- **Project Portfolio** - Case studies of completed projects
-- **Blog/News** - Technical articles and company updates
-- **Contact Form** - Lead generation with Formspree integration
-- **GitHub Pages Ready** - Easy deployment via GitHub Actions
+## Architecture & Technology
 
-## Technology Stack
+- **Framework:** [Jekyll](https://jekyllrb.com/) (Static Site Generation)
+- **Deployment:** GitHub Pages via GitHub Actions CI/CD
+- **Typography & Styling:** Plus Jakarta Sans / System font stack, CSS custom properties, responsive grid, zero external CSS framework bloat
+- **Scripting:** Pure vanilla JavaScript (zero dependencies, accessible mobile menu, clipboard copy)
+- **SEO & Social:** OpenGraph tags, Twitter Cards, dynamic sitemap, semantic HTML5
 
-- **Jekyll** (static site generator)
-- **Minima** (theme framework)
-- **HTML5, CSS3, JavaScript**
-- **SVG graphics** (scalable icons and illustrations)
+## Pages & Sections
 
-## Services
+1. **Home (`index.html`)** — Value proposition, live metrics, core capabilities overview, selected case studies, engineering principles, and direct call to action.
+2. **Services (`services.html`)** — In-depth breakdown of software engineering, cloud architecture, DevOps, IT consulting, cybersecurity, and mobile solutions.
+3. **Projects (`projects.md` & `_projects/*`)** — Production case studies (ShopEase, MediCore, EduManage, FinTrack) featuring client context, architectural solutions, and measurable impact.
+4. **About (`about.html`)** — Origins of Aarohan ("Ascent"), engineering principles, technical stack matrix, and studio location.
+5. **Contact (`contact.html`)** — Minimalist direct communication channels (email, telephone, office headquarters, GitHub) with one-click copy and rapid SLA.
+6. **404 (`404.md`)** — Minimalist error page with swift navigation.
 
-1. Web Development (React, Vue, Angular, Node.js)
-2. Cloud Solutions (AWS, Azure, GCP)
-3. IT Consulting
-4. Cybersecurity
-5. Mobile App Development (iOS & Android)
-
-## Getting Started Locally
+## Local Development
 
 ### Prerequisites
 
-- Ruby (2.7.0 or higher)
-- Bundler gem
+- Ruby (3.0+)
+- Bundler
 
 ```bash
 # Install dependencies
 bundle install
 
-# Serve locally
+# Run local development server
 bundle exec jekyll serve
 
-# Build for production
+# Build production distribution
 bundle exec jekyll build
 ```
 
-Visit `http://localhost:4000` to view the site locally.
-
-## Deployment to GitHub Pages
-
-### Method 1: GitHub Actions (Recommended)
-
-This repository includes a GitHub Actions workflow that automatically builds and deploys the site to GitHub Pages on every push to the `main` branch.
-
-To set this up:
-
-1. Push the code to a GitHub repository (e.g., `aarohanithub/aarohan-it-hub`)
-2. Go to **Settings > Pages** in your repository
-3. Under **Source**, select **GitHub Actions**
-4. The site will be automatically deployed from the workflow
-
-### Method 2: Manual GitHub Pages
-
-1. Push the code to the `gh-pages` branch:
-```bash
-git checkout -b gh-pages
-git push origin gh-pages
-```
-Or configure in **Settings > Pages** to deploy from the `gh-pages` or `main`/docs branch.
-
-## Configuration
-
-Key configuration is in `_config.yml`:
-
-```yaml
-# Update these for your organization
-title: Aarohan IT Hub
-url: "https://aarohanithub.github.io"
-baseurl: "/aarohan-it-hub"   # Remove or set to "" if using a custom domain
-```
-
-## Customization
-
-### Content
-- Edit pages in `_pages/` directory
-- Blog posts in `_posts/` (format: `YYYY-MM-DD-title.md`)
-- Projects in `_projects/` directory
-- Header/footer in `_includes/`
-
-### Styling
-- Custom CSS in `assets/css/style.scss`
-- Override Minima theme colors and variables at the top of the file
-
-### Logo
-- Replace `assets/images/aarohan-logo.svg` with your logo
-
-## Formspree Contact Form
-
-The contact form uses [Formspree](https://formspree.io/) for email notifications.
-
-1. Sign up at [formspree.io](https://formspree.io/)
-2. Get your form ID
-3. Replace `your-form-id` in `_pages/contact.html`:
-```html
-action="https://formspree.io/f/your-form-id"
-```
-
-## Project Structure
+## Directory Structure
 
 ```
 aarohan-it-hub/
-├── _config.yml              # Jekyll configuration
-├── _layouts/                # Page layouts
-│   └── default.html
-├── _includes/               # Reusable components
-│   ├── header.html
-│   └── footer.html
-├── _pages/                  # Website pages
-│   ├── about.html
-│   ├── services.html
-│   ├── projects.md
-│   └── contact.html
-├── _posts/                  # Blog posts
-├── _projects/               # Project portfolio items
-├── blog/                    # Blog index
-│   └── index.html
+├── _config.yml              # Jekyll configuration & company metadata
+├── _layouts/                # Templates
+│   ├── default.html         # Base HTML5 layout with SEO tags
+│   ├── page.html            # Standard page layout with hero
+│   ├── project.html         # Case study layout with tech pills & meta
+│   └── home.html            # Home page layout
+├── _includes/               # Reusable partials
+│   ├── header.html          # Sticky header with navigation & mobile toggle
+│   └── footer.html          # Footer with direct contacts & copyright
+├── _projects/               # Portfolio case studies
+│   ├── shopease.md
+│   ├── medicore.md
+│   ├── edumanage.md
+│   └── fintrack.md
+├── index.html               # Home page
+├── services.html            # Services & capabilities page
+├── projects.md              # Projects showcase page
+├── about.html               # About & company profile page
+├── contact.html             # Direct contact channels
+├── 404.md                   # 404 error page
 ├── assets/
 │   ├── css/
-│   │   └── style.scss       # Main stylesheet
+│   │   └── style.scss       # Modern SCSS stylesheet
 │   ├── js/
-│   │   └── main.js          # JavaScript
+│   │   └── main.js          # Accessible vanilla JavaScript
 │   └── images/
-│       └── aarohan-logo.svg # Logo
-├── Gemfile                  # Ruby dependencies
-├── README.md
-└── .github/
-    └── workflows/
-        └── deploy.yml       # GitHub Actions deployment
-```
-
-## GitHub Pages URL
-
-After deployment, the site will be available at:
-```
-https://aarohanithub.github.io/aarohan-it-hub
+│       ├── aarohan-logo.svg # Brand logo mark
+│       └── favicon.svg      # Favicon mark
+├── CNAME                    # Custom domain mapping (aarohanithub.com.np)
+├── Gemfile                  # Gem dependencies
+└── .github/workflows/
+    └── deploy.yml           # Automated GitHub Pages CI/CD workflow
 ```
 
 ## License
 
-This project is open source and available under the MIT License.
-
----
-
-**Aarohan IT Hub** - Empowering businesses with innovative technology solutions.
+Copyright &copy; Aarohan IT Hub. All rights reserved.

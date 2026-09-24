@@ -1,74 +1,65 @@
 ---
 layout: page
-title: Our Projects
+title: "Projects & Case Studies"
+badge: "Portfolio"
 permalink: /projects/
-excerpt: "A showcase of technology solutions we've built for our clients."
+excerpt: "A selection of production systems, cloud platforms, and enterprise software engineered for our partners."
 ---
 
-<div class="container">
-  <h2 class="section-title">Our Work</h2>
-  <p class="section-subtitle">A selection of projects we've delivered across various industries</p>
-
-  <div class="projects-container">
+<div class="container projects-page-container">
+  <div class="projects-showcase-grid">
 
     {% for project in site.projects %}
-    {% if forloop.first %}
-    <div class="project-card-detailed">
-      <div class="project-image">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="20" width="360" height="260" rx="15" fill="none" stroke="#007acc" stroke-width="2" opacity="0.3"/>
-          <rect x="60" y="60" width="280" height="60" rx="8" fill="#007acc" opacity="0.15"/>
-          <circle cx="120" cy="160" r="25" fill="#007acc" opacity="0.25"/>
-          <circle cx="200" cy="160" r="25" fill="#007acc" opacity="0.25"/>
-          <circle cx="280" cy="160" r="25" fill="#007acc" opacity="0.25"/>
-        </svg>
+    <article class="project-showcase-card">
+      <div class="showcase-card-header">
+        <span class="showcase-tag">{{ project.meta.domain | default: "Enterprise Solution" }}</span>
+        <span class="showcase-date">{{ project.meta.date | default: "2024" }}</span>
       </div>
-      <div class="project-info">
-        <h3>{{ project.title }}</h3>
-        {% if project.meta %}
-          {% if project.meta.client %}
-            <p><strong>Client:</strong> {{ project.meta.client }}</p>
-          {% endif %}
-          {% if project.meta.date %}
-            <p><strong>Date:</strong> {{ project.meta.date }}</p>
-          {% endif %}
-          {% if project.meta.technologies %}
-            <p><strong>Technologies:</strong> {{ project.meta.technologies }}</p>
-          {% endif %}
+
+      <div class="showcase-card-body">
+        <h2 class="showcase-title">
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h2>
+
+        {% if project.meta.client %}
+          <p class="showcase-client"><strong>Client:</strong> {{ project.meta.client }}</p>
         {% endif %}
-        {{ project.content | truncate: 300 }}
-        <a href="{{ project.url }}" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
-      </div>
-    </div>
-    {% else %}
-    <div class="project-card-detailed {% if forloop.index0 == 1 or forloop.index0 == 3 %}reverse{% endif %}">
-      <div class="project-image">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="20" width="360" height="260" rx="15" fill="none" stroke="#007acc" stroke-width="2" opacity="0.3"/>
-          <rect x="80" y="60" width="240" height="180" rx="10" fill="#007acc" opacity="0.2"/>
-          <rect x="120" y="100" width="160" height="30" rx="5" fill="#fff" opacity="0.7"/>
-          <rect x="120" y="150" width="160" height="30" rx="5" fill="#fff" opacity="0.7"/>
-        </svg>
-      </div>
-      <div class="project-info">
-        <h3>{{ project.title }}</h3>
-        {% if project.meta %}
-          {% if project.meta.client %}
-            <p><strong>Client:</strong> {{ project.meta.client }}</p>
-          {% endif %}
-          {% if project.meta.date %}
-            <p><strong>Date:</strong> {{ project.meta.date }}</p>
-          {% endif %}
-          {% if project.meta.technologies %}
-            <p><strong>Technologies:</strong> {{ project.meta.technologies }}</p>
-          {% endif %}
+
+        <p class="showcase-desc">
+          {{ project.description | default: project.content | strip_html | truncate: 180 }}
+        </p>
+
+        {% if project.meta.technologies %}
+          <div class="showcase-tech-stack">
+            {% assign tech_items = project.meta.technologies | split: ", " %}
+            {% for t in tech_items %}
+              <span class="tech-pill">{{ t }}</span>
+            {% endfor %}
+          </div>
         {% endif %}
-        {{ project.content | truncate: 300 }}
-        <a href="{{ project.url }}" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
       </div>
-    </div>
-    {% endif %}
+
+      <div class="showcase-card-footer">
+        <a href="{{ project.url | relative_url }}" class="inline-arrow-link">
+          Read Full Case Study
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </article>
     {% endfor %}
 
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="page-bottom-cta">
+    <div class="cta-inner">
+      <div>
+        <h3>Need custom software engineered for your organization?</h3>
+        <p>We work with startups and established enterprises to build resilient, scalable technology.</p>
+      </div>
+      <div>
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Start a Project</a>
+      </div>
+    </div>
   </div>
 </div>

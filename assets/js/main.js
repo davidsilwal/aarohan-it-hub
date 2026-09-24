@@ -1,101 +1,116 @@
-// Main JavaScript for Aarohan IT Hub
-// Handles mobile navigation toggle
+/**
+ * Aarohan IT Hub - Main JavaScript
+ * Lightweight, accessible, dependency-free vanilla JS
+ */
 
-(function() {
+(function () {
   'use strict';
 
-  // Mobile menu toggle
-  var menuToggle = document.querySelector('.mobile-menu-toggle');
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-      var header = document.querySelector('.site-header');
-      header.classList.toggle('nav-active');
-      
-      // Animate toggle icon
-      var spans = this.querySelectorAll('span');
-      this.classList.toggle('open');
-      
-      if (this.classList.contains('open')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-      } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+  // 1. Mobile Menu Toggle
+  var mobileToggle = document.getElementById('mobile-toggle');
+  var navMenu = document.getElementById('nav-menu');
+  var siteHeader = document.getElementById('site-header');
+
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = navMenu.classList.toggle('is-open');
+      mobileToggle.classList.toggle('is-open', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close mobile menu on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
+        navMenu.classList.remove('is-open');
+        mobileToggle.classList.remove('is-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.focus();
       }
+    });
+
+    // Close mobile menu on click outside
+    document.addEventListener('click', function (e) {
+      if (navMenu.classList.contains('is-open')) {
+        if (!siteHeader.contains(e.target)) {
+          navMenu.classList.remove('is-open');
+          mobileToggle.classList.remove('is-open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+
+    // Close mobile menu when clicking any nav link
+    var navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (navMenu.classList.contains('is-open')) {
+          navMenu.classList.remove('is-open');
+          mobileToggle.classList.remove('is-open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   }
 
-  // Smooth scrolling for anchor links
-  var anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
-  anchorLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      var targetId = this.getAttribute('href');
-      var targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        e.preventDefault();
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+  // 2. Header shadow on scroll
+  function updateHeaderScroll() {
+    if (!siteHeader) return;
+    if (window.scrollY > 20) {
+      siteHeader.classList.add('is-scrolled');
+    } else {
+      siteHeader.classList.remove('is-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
+
+  // 3. Copy Email to Clipboard
+  var copyButtons = document.querySelectorAll('.copy-email-btn');
+  copyButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var email = this.getAttribute('data-email');
+      if (!email) return;
+
+      var textSpan = this.querySelector('.btn-text') || this;
+      var originalText = textSpan.textContent;
+
+      function onCopySuccess() {
+        textSpan.textContent = 'Copied to Clipboard!';
+        btn.classList.add('btn-copied');
+        setTimeout(function () {
+          textSpan.textContent = originalText;
+          btn.classList.remove('btn-copied');
+        }, 2200);
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(onCopySuccess).catch(function () {
+          fallbackCopyText(email, onCopySuccess);
         });
+      } else {
+        fallbackCopyText(email, onCopySuccess);
       }
     });
   });
 
-  // Add active class to current nav item
-  var currentPath = window.location.pathname;
-  var navLinks = document.querySelectorAll('.site-nav a');
-  
-  navLinks.forEach(function(link) {
-    var linkPath = link.getAttribute('href');
-    if (linkPath === currentPath || (linkPath === '/' && currentPath === '/')) {
-      link.classList.add('active');
+  function fallbackCopyText(text, callback) {
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    textArea.style.top = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      if (callback) callback();
+    } catch (err) {
+      console.error('Fallback copy failed', err);
     }
-  });
-
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', function(e) {
-    var header = document.querySelector('.site-header');
-    var menuToggle = document.querySelector('.mobile-menu-toggle');
-    
-    if (header && menuToggle) {
-      if (header.classList.contains('nav-active') && 
-          !e.target.closest('.site-nav') && 
-          !e.target.matches('.mobile-menu-toggle') &&
-          !e.target.closest('.mobile-menu-toggle')) {
-        header.classList.remove('nav-active');
-        menuToggle.classList.remove('open');
-        
-        var spans = menuToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-      }
-    }
-  });
-
-  // Add animation classes on scroll (Intersection Observer)
-  if ('IntersectionObserver' in window) {
-    var observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    var animateOnScrollObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-        }
-      });
-    }, observerOptions);
-
-    // Elements to animate
-    var animateElements = document.querySelectorAll('.service-card, .project-card, .team-member');
-    animateElements.forEach(function(el) {
-      animateOnScrollObserver.observe(el);
-    });
+    document.body.removeChild(textArea);
   }
 
 })();

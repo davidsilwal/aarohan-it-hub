@@ -1,87 +1,225 @@
 ---
-layout: home
-title: Home
+layout: default
+title: "Home"
+excerpt: "Aarohan IT Hub is a technology and cloud engineering firm in Kathmandu, Nepal. We craft scalable web platforms, cloud architecture, and modern digital systems."
 ---
 
-<div class="hero-section">
-  <div class="hero-content container">
-    <h1 class="hero-title">Empowering Businesses with <span class="highlight">Innovative Technology Solutions</span></h1>
-    <p class="hero-subtitle">Transforming ideas into digital reality through expert software development, cloud infrastructure, and strategic IT consulting.</p>
-    <div class="hero-buttons">
-      <a href="/services/" class="btn btn-primary">Our Services</a>
-      <a href="/contact/" class="btn btn-secondary">Contact Us</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <rect x="50" y="100" width="700" height="400" rx="20" fill="none" stroke="#007acc" stroke-width="2" opacity="0.6"/>
-      <circle cx="200" cy="250" r="40" fill="#007acc" opacity="0.3"/>
-      <rect x="300" y="180" width="300" height="80" rx="10" fill="#007acc" opacity="0.2"/>
-      <rect x="300" y="300" width="300" height="80" rx="10" fill="#007acc" opacity="0.2"/>
-      <circle cx="600" cy="400" r="30" fill="#007acc" opacity="0.3"/>
-    </svg>
-  </div>
-</div>
-
-<section class="services-preview section">
-  <div class="container">
-    <h2 class="section-title">What We Offer</h2>
-    <p class="section-subtitle">Comprehensive technology solutions tailored to your business needs</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line><polyline points="6 6 12 12 11 13"></polyline></svg>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Software Engineering &amp; Cloud Studio &middot; Kathmandu, Nepal</span>
+      </div>
+      <h1 class="hero-headline">
+        We engineer high-performance software, cloud systems, and modern digital products.
+      </h1>
+      <p class="hero-lead">
+        Aarohan IT Hub partners with forward-thinking enterprises and growing companies to architect, build, and scale resilient technology solutions with zero bloat.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ '/services/' | relative_url }}" class="btn btn-primary">Our Capabilities</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">View Case Studies</a>
+      </div>
+      <div class="hero-trust-row">
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Production-Grade Architecture</span>
         </div>
-        <h3>Web Development</h3>
-        <p>Custom web applications and responsive websites built with modern frameworks and best practices.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Cloud &amp; DevOps Native</span>
         </div>
-        <h3>Cloud Solutions</h3>
-        <p>Scalable cloud infrastructure, deployment, and management to power your growing business.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9-7-9 7-9-7"></path><line x1="12" y1="12" x2="12" y2="19"></line><polyline points="12 19 12 12 18 12"></polyline></svg>
+        <div class="trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Direct Technical Collaboration</span>
         </div>
-        <h3>IT Consulting</h3>
-        <p>Strategic technology advisory to align your IT infrastructure with business goals.</p>
-      </div>
-    </div>
-    <div class="center">
-      <a href="/services/" class="btn btn-primary">View All Services</a>
-    </div>
-  </div>
-</section>
-
-<section class="about-preview section bg-light">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <h2>About Aarohan IT Hub</h2>
-        <p>We are a technology company based in Nepal, dedicated to delivering exceptional IT services to businesses of all sizes. Our team of experienced professionals brings deep expertise in software development, cloud computing, cybersecurity, and digital transformation.</p>
-        <p>At Aarohan IT Hub, we believe in building long-term partnerships with our clients by providing reliable, innovative, and cost-effective solutions that drive measurable business value.</p>
-        <a href="/about/" class="btn btn-primary">Learn More About Us</a>
-      </div>
-      <div class="about-image">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect x="50" y="50" width="300" height="200" rx="20" fill="none" stroke="#007acc" stroke-width="2" opacity="0.4"/>
-          <path d="M100 100 L300 100 L280 200 L120 200 Z" fill="none" stroke="#007acc" stroke-width="2"/>
-          <circle cx="200" cy="150" r="30" fill="#007acc" opacity="0.3"/>
-        </svg>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section section">
+<!-- Metrics & Impact Bar -->
+<section class="metrics-bar">
   <div class="container">
-    <div class="cta-content">
-      <h2>Ready to Transform Your Business?</h2>
-      <p>Get in touch with us to discuss your project and receive a free consultation.</p>
-      <a href="/contact/" class="btn btn-primary">Get Started</a>
+    <div class="metrics-grid">
+      <div class="metric-item">
+        <div class="metric-number">50+</div>
+        <div class="metric-label">Projects Delivered</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-number">99.9%</div>
+        <div class="metric-label">Target Cloud Uptime</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-number">4+</div>
+        <div class="metric-label">Years of Engineering</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-number">&lt; 24h</div>
+        <div class="metric-label">Direct Response SLA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Capabilities Preview -->
+<section class="section capabilities-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow-badge">Capabilities</span>
+      <h2 class="section-title">End-to-End Technology Solutions</h2>
+      <p class="section-lead">Disciplined engineering practices designed to solve core technical and operational challenges.</p>
+    </div>
+
+    <div class="capabilities-grid">
+      <div class="capability-card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </div>
+        <h3>Custom Software &amp; Web Platforms</h3>
+        <p>Full-stack web applications, customer portals, and internal tooling engineered with modern, typed frameworks for speed and reliability.</p>
+        <ul class="capability-checklist">
+          <li>Enterprise Web Applications</li>
+          <li>API Architecture &amp; Integrations</li>
+          <li>Database Modeling &amp; Optimization</li>
+        </ul>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+        </div>
+        <h3>Cloud Architecture &amp; DevOps</h3>
+        <p>Scalable cloud infrastructure on AWS and Google Cloud with automated CI/CD pipelines, container orchestration, and zero-downtime releases.</p>
+        <ul class="capability-checklist">
+          <li>Cloud Migration &amp; Cost Control</li>
+          <li>Docker &amp; Kubernetes Environments</li>
+          <li>Automated Testing &amp; Deployments</li>
+        </ul>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        </div>
+        <h3>Strategic IT Systems Consulting</h3>
+        <p>Pragmatic technology advisory to align system architecture with business strategy, modernize legacy software, and optimize technical debt.</p>
+        <ul class="capability-checklist">
+          <li>System Architecture Roadmaps</li>
+          <li>Legacy Modernization Plans</li>
+          <li>Performance &amp; Scale Audits</li>
+        </ul>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h3>Cybersecurity &amp; Systems Auditing</h3>
+        <p>Proactive security assessments, identity management, vulnerability scanning, and hardening to safeguard your critical data and assets.</p>
+        <ul class="capability-checklist">
+          <li>Vulnerability &amp; Code Scanning</li>
+          <li>Access Control &amp; IAM Policies</li>
+          <li>Disaster Recovery &amp; Failover</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-footer-link">
+      <a href="{{ '/services/' | relative_url }}" class="inline-arrow-link">
+        Explore full service breakdown and specifications
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects Preview -->
+<section class="section section-surface featured-projects-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow-badge">Portfolio</span>
+      <h2 class="section-title">Selected Case Studies</h2>
+      <p class="section-lead">A snapshot of mission-critical systems and software delivered for our partners.</p>
+    </div>
+
+    <div class="projects-grid">
+      {% for project in site.projects limit:3 %}
+      <div class="project-summary-card">
+        <div class="project-card-header">
+          <span class="project-domain-tag">{{ project.meta.domain | default: "Enterprise Solution" }}</span>
+          <span class="project-year">{{ project.meta.date | default: "2024" }}</span>
+        </div>
+        <h3 class="project-card-title">
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h3>
+        <p class="project-card-desc">{{ project.description | default: project.content | strip_html | truncate: 140 }}</p>
+        {% if project.meta.technologies %}
+          <div class="project-card-tech">
+            {% assign tags = project.meta.technologies | split: ", " %}
+            {% for t in tags limit:4 %}
+              <span class="tech-pill">{{ t }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="project-card-footer">
+          <a href="{{ project.url | relative_url }}" class="card-link">Read Case Study &rarr;</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section-footer-link">
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- Engineering Principles ("Less is More") -->
+<section class="section principles-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow-badge">Our Philosophy</span>
+      <h2 class="section-title">Why Engineering Teams Choose Aarohan</h2>
+      <p class="section-lead">We believe simplicity, architectural clarity, and direct communication create the best software.</p>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-card">
+        <div class="principle-num">01</div>
+        <h3>Minimalism &amp; Performance</h3>
+        <p>We eliminate unnecessary dependencies and bloated frameworks. Clean architecture results in faster load times, lower hosting costs, and effortless maintenance.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-num">02</div>
+        <h3>Production-Ready from Day One</h3>
+        <p>Security policies, automated tests, environment configs, and CI/CD pipelines are built directly into our baseline. We never treat infrastructure as an afterthought.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-num">03</div>
+        <h3>Direct Senior Collaboration</h3>
+        <p>You speak directly with the engineers building your systems. No middlemen, no jargon, and complete transparency on timelines, budgets, and code ownership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Minimalist Direct CTA Banner -->
+<section class="cta-banner-section">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-text">
+        <span class="eyebrow-badge eyebrow-white">Get in Touch</span>
+        <h2>Have a project or technical challenge in mind?</h2>
+        <p>Reach out directly for an engineering assessment, architectural consultation, or project scope estimation.</p>
+      </div>
+      <div class="cta-action">
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-cta">Contact Our Engineers</a>
+      </div>
     </div>
   </div>
 </section>

@@ -1,14 +1,25 @@
-# Welcome to Aarohan IT Hub!
-# Configuration file for Jekyll
-# For more information, see https://jekyllrb.com/docs/configuration
+# Aarohan IT Hub - Site Configuration
+# Modern, minimalist Jekyll configuration
 
-# Site settings
 title: Aarohan IT Hub
 logo: /assets/images/aarohan-logo.svg
-description: "Aarohan IT Hub - Empowering businesses with innovative technology solutions"
-keyword_exclude: [/node_modules/, /vendor/]
+description: "Aarohan IT Hub - Enterprise-grade software engineering, cloud architecture, and IT consulting in Kathmandu, Nepal."
+url: "https://aarohanithub.com.np"
+baseurl: ""
 
-# Social metadata
+# Company Details
+company:
+  name: Aarohan IT Hub
+  tagline: "Empowering Businesses with Modern Technology Solutions"
+  location: "Kathmandu, Nepal"
+  address: "SuNepal Plaza, 3rd Floor, Kathmandu, Nepal"
+  email: "contact@aarohanithub.com.np"
+  phone: "+977 1 4420000"
+  hours: "Sunday – Friday: 9:00 AM – 6:00 PM NPT"
+  github: "https://github.com/aarohanithub"
+  linkedin: "https://linkedin.com/company/aarohanithub"
+
+# Social Metadata
 social:
   name: Aarohan IT Hub
   links:
@@ -17,12 +28,16 @@ social:
 # Author
 author:
   name: Aarohan IT Hub Team
-  url: #
+  url: "https://aarohanithub.com.np"
 
-# Build settings
-theme: minima
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Plugins
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
 # Exclude from processing
@@ -34,9 +49,6 @@ exclude:
   - node_modules
   - vendor
   - README.md
-
-# URL settings
-url: "https://aarohanithub.com.np"
 
 # Markdown settings
 markdown: kramdown

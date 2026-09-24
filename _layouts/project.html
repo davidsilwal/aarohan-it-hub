@@ -2,29 +2,76 @@
 layout: default
 ---
 
-<article class="project">
-  <div class="container">
-    <header class="project-header">
-      <h1 class="project-title">{{ page.title }}</h1>
-      {% if page.meta.client %}
-        <p class="project-meta"><strong>Client:</strong> {{ page.meta.client }}</p>
-      {% endif %}
-      {% if page.meta.date %}
-        <p class="project-meta"><strong>Date:</strong> {{ page.meta.date }}</p>
-      {% endif %}
-      {% if page.meta.technologies %}
-        <p class="project-meta"><strong>Technologies:</strong> {{ page.meta.technologies }}</p>
-      {% endif %}
-    </header>
-
-    {% if page.cover_image %}
-      <div class="project-cover">
-        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}">
+<article class="project-case-study">
+  <header class="case-study-hero">
+    <div class="container">
+      <div class="case-study-back">
+        <a href="{{ '/projects/' | relative_url }}" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Projects
+        </a>
       </div>
-    {% endif %}
 
-    <div class="project-content">
-      {{ content }}
+      <div class="case-study-header-content">
+        <span class="eyebrow-badge">Case Study</span>
+        <h1 class="case-study-title">{{ page.title }}</h1>
+        {% if page.description %}
+          <p class="case-study-lead">{{ page.description }}</p>
+        {% endif %}
+      </div>
+
+      <div class="project-meta-bar">
+        {% if page.meta.client %}
+          <div class="meta-cell">
+            <span class="meta-label">Client</span>
+            <span class="meta-val">{{ page.meta.client }}</span>
+          </div>
+        {% endif %}
+        {% if page.meta.date %}
+          <div class="meta-cell">
+            <span class="meta-label">Year</span>
+            <span class="meta-val">{{ page.meta.date }}</span>
+          </div>
+        {% endif %}
+        {% if page.meta.domain %}
+          <div class="meta-cell">
+            <span class="meta-label">Industry</span>
+            <span class="meta-val">{{ page.meta.domain }}</span>
+          </div>
+        {% endif %}
+        {% if page.meta.technologies %}
+          <div class="meta-cell meta-cell-wide">
+            <span class="meta-label">Stack</span>
+            <div class="tech-pills">
+              {% assign tech_list = page.meta.technologies | split: ", " %}
+              {% for tech in tech_list %}
+                <span class="tech-pill">{{ tech }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="case-study-layout">
+      <div class="case-study-content markdown-content">
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="case-study-bottom-cta">
+      <div class="cta-inner">
+        <div>
+          <h3>Ready to build your next product?</h3>
+          <p>Let's discuss how our engineering team can help realize your architecture.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Start a Project</a>
+          <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">View All Work</a>
+        </div>
+      </div>
     </div>
   </div>
 </article>
