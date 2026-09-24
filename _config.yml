@@ -36,8 +36,7 @@ exclude:
   - README.md
 
 # URL settings
-url: "https://aarohanithub.github.io"
-baseurl: "/aarohan-it-hub"
+url: "https://aarohanithub.com.np"
 
 # Markdown settings
 markdown: kramdown
